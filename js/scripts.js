@@ -4,9 +4,9 @@ function toDo(names, items, descriptions, completed) {
   this.items = items;
 	this.descriptions = descriptions;
 	this.completed = completed;
-
 }
 
+// User Interface Logic
 $(document).ready(function() {
   $("form#new-list").submit(function(event) {
     event.preventDefault();
@@ -18,14 +18,20 @@ $(document).ready(function() {
 
     var newList = new toDo(inputtedName, inputtedItem, inputtedDescription, inputtedComplete);
 
-    $("ul#showtodo").append("<li><span class='place'>" + newList.items + "</span></li>");
+    $("ul#showtodo").append('<li><span class="place" id="' + newList.items + '">' + newList.items + "</span></li>");
 
-    $(".place").last().click(function() {
+
+    $("#showtodo li").last().click(function() {
 		 $("#show-todo").show();
 		 $("#show-todo h2").text(newList.items);
      $(".name").text(newList.names);
 		 $(".description").text(newList.descriptions);
      $(".complete").text(newList.completed);
+     $("#show-todo").click(function(event) {
+       event.preventDefault();
+      //  console.log("click!");
+       $("#showtodo li span#" + newList.items).parent().remove();
+     });
 		});
 
       $("input#new-names").val();
