@@ -1,0 +1,15 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+#show-place {
+  display: none;
+}
+
+.place {
+  cursor: pointer;
+  color: #0088cc;
+}
+.contact:hover {
+  text-decoration: underline;
+}
