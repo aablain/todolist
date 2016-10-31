@@ -1,12 +1,12 @@
 //business logic
-function Place(locations, visitor, visited, landmark, notes, imagez) {
+function Place(locations, visitor, visited, landmark, notes) {
   debugger;
   this.locations = locations;
   this.visitor = visitor;
 	this.visited = visited;
 	this.landmark = landmark;
   this.notes = notes;
-  this.imagez = imagez;
+  // this.imagez = imagez;
 }
 
 $(document).ready(function() {
@@ -18,9 +18,9 @@ $(document).ready(function() {
     var inputtedVisited = $("input#new-visited").val();
     var inputtedLandmarks = $("input#new-landmark").val();
     var inputtedNotes = $("input#new-notes").val();
-    var inputtedImagez = $("input#new-imagez").val();
+    // var inputtedImagez = $("input#new-imagez").val();
 
-    var newPlace = new Place(inputtedLocation, inputtedVisitor, inputtedVisited, inputtedLandmarks, inputtedNotes, inputtedImagez);
+    var newPlace = new Place(inputtedLocation, inputtedVisitor, inputtedVisited, inputtedLandmarks, inputtedNotes);
 
     $("ul#show-place").append("<li><span class='place'>" + newPlace.locations + "</span></li>");
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
      $(".visited").text(newPlace.visited);
 		 $(".landmark").text(newPlace.landmark);
 		 $(".notes").text(newPlace.notes);
-		 $(".imagez").text(newPlace.imagez);
+		//  $(".imagez").append("<img" + " " + 'src="' + newPlace.imagez + '">');
 		});
 
     $("input#new-location").val("");
@@ -39,6 +39,6 @@ $(document).ready(function() {
 	  $("input#new-visited").val("");
 	  $("input#new-landmark").val("");
     $("input#new-notes").val("");
-    $("input#new-imagez").val("");
+    // $("input#new-imagez").val("");
   });
 });
