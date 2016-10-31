@@ -13,6 +13,7 @@ $(document).ready(function() {
 
     var inputtedName = $("input#new-names").val();
     var inputtedItem = $("input#new-items").val();
+    // var inputtedItem = inputtedItemSpace.replace(^/a-zA-Z/g, '')
     var inputtedDescription = $("input#new-descriptions").val();
     var inputtedComplete = $("input#new-completed").val();
 

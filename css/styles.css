@@ -1,14 +1,28 @@
 body {
 	font-family: 'Roboto', sans-serif;
+	margin-top: 50px;
+	background-color: #FFEC8B;
+}
+
+h1 {
+	text-align: center;
 }
 
 #show-todo {
   display: none;
 }
 
-.place {
+.container {
+  margin-top: 3%;
+  padding-bottom: 200px;
+  padding: 2%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #FFF;
+}
+
+#showtodo {
   cursor: pointer;
-  color: #0088cc;
+  color: red;
 }
 .contact:hover {
   text-decoration: ;
