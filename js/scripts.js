@@ -1,6 +1,7 @@
 //business logic
-function Place(location, visitor, visited, landmark, notes, imagez) {
-  this.location = location;
+function Place(locations, visitor, visited, landmark, notes, imagez) {
+  debugger;
+  this.locations = locations;
   this.visitor = visitor;
 	this.visited = visited;
 	this.landmark = landmark;
@@ -19,13 +20,13 @@ $(document).ready(function() {
     var inputtedNotes = $("input#new-notes").val();
     var inputtedImagez = $("input#new-imagez").val();
 
-    var newPlace = new Contact(inputtedLocation, inputtedVisitor, inputtedVisited, inputtedLandmarks, inputtedNotes, inputtedImagez);
+    var newPlace = new Place(inputtedLocation, inputtedVisitor, inputtedVisited, inputtedLandmarks, inputtedNotes, inputtedImagez);
 
-    $("ul#show-place").append("<li><span class='place'>" + Place.location + "</span></li>");
+    $("ul#show-place").append("<li><span class='place'>" + newPlace.locations + "</span></li>");
 
     $(".place").last().click(function() {
-		 $("#show-place").show();
-		 $("#show-place h2").text(newPlace.location);
+		 $("#showplace").show();
+		 $("#showplace h2").text(newPlace.locations);
 		 $(".visitor").text(newPlace.visitor);
      $(".visited").text(newPlace.visited);
 		 $(".landmark").text(newPlace.landmark);
