@@ -15,49 +15,39 @@
     <div class="row">
       <div class="col-md-6">
         <p>Get your shit done with this useful to-do list!</p>
-        <h2>Add a Destination:</h2>
-        <form id="new-place">
+        <h2>Make a List:</h2>
+        <form id="new-list">
           <div class="form-group">
-            <label for="new-location">Name of Location</label>
-            <input type="text" class="form-control" id="new-location">
+            <label for="new-names">Name</label>
+            <input type="text" class="form-control" id="new-names">
           </div>
           <div class="form-group">
-            <label for="new-visitor">First Name of Visitor</label>
-            <input type="text" class="form-control" id="new-visitor">
+            <label for="new-items">Item</label>
+            <input type="text" class="form-control" id="new-items">
           </div>
           <div class="form-group">
-            <label for="new-visited">When Visited</label>
-            <input type="text" class="form-control" id="new-visited">
+            <label for="new-descriptions">Description</label>
+            <input type="text" class="form-control" id="new-descriptions">
           </div>
           <div class="form-group">
-            <label for="new-landmark">Landmarks</label>
-            <input type="text" class="form-control" id="new-landmark">
+            <label for="new-completed">Complete By</label>
+            <input type="text" class="form-control" id="new-completed">
           </div>
-          <div class="form-group">
-             <label for="new-notes">Notes</label>
-             <input type="text" class="form-control" id="new-notes">
-           </div>
-           <!-- <div class="form-group">
-              <label for="new-imagez">Image (link)</label>
-              <input type="text" class="form-control" id="new-imagez">
-            </div> -->
 
           <button type="submit" class="btn btn-default">Go!</button>
         </form>
 
-        <h2>Place:</h2>
-        <ul id="show-place">
+        <h2>To-Do:</h2>
+        <ul id="showtodo">
 
         </ul>
       </div>
       <div class="col-md-6">
-          <div id="showplace">
+          <div id="show-todo">
             <h2></h2>
-            <p><em>Who Visited: <span class="visitor"></span></em></p>
-            <p>When Visited: <span class="visited"></span></p>
-            <p>Landmark(s): <span class="landmark"></span></p>
-            <p>Notes: <span class="notes"></span></p>
-            <!-- <span class="imagez"></span> -->
+            <p>Name <span class="name"></span></p>
+            <p>Description: <span class="description"></span></p>
+            <p>Complete by: <span class="complete"></span></p>
           </div>
       </div>
     </div>

@@ -1,44 +1,37 @@
 //business logic
-function Place(locations, visitor, visited, landmark, notes) {
-  debugger;
-  this.locations = locations;
-  this.visitor = visitor;
-	this.visited = visited;
-	this.landmark = landmark;
-  this.notes = notes;
-  // this.imagez = imagez;
+function toDo(names, items, descriptions, completed) {
+  this.names = names;
+  this.items = items;
+	this.descriptions = descriptions;
+	this.completed = completed;
+
 }
 
 $(document).ready(function() {
-  $("form#new-place").submit(function(event) {
+  $("form#new-list").submit(function(event) {
     event.preventDefault();
 
-    var inputtedLocation = $("input#new-location").val();
-    var inputtedVisitor = $("input#new-visitor").val();
-    var inputtedVisited = $("input#new-visited").val();
-    var inputtedLandmarks = $("input#new-landmark").val();
-    var inputtedNotes = $("input#new-notes").val();
-    // var inputtedImagez = $("input#new-imagez").val();
+    var inputtedName = $("input#new-names").val();
+    var inputtedItem = $("input#new-items").val();
+    var inputtedDescription = $("input#new-descriptions").val();
+    var inputtedComplete = $("input#new-completed").val();
 
-    var newPlace = new Place(inputtedLocation, inputtedVisitor, inputtedVisited, inputtedLandmarks, inputtedNotes);
+    var newList = new toDo(inputtedName, inputtedItem, inputtedDescription, inputtedComplete);
 
-    $("ul#show-place").append("<li><span class='place'>" + newPlace.locations + "</span></li>");
+    $("ul#showtodo").append("<li><span class='place'>" + newList.items + "</span></li>");
 
     $(".place").last().click(function() {
-		 $("#showplace").show();
-		 $("#showplace h2").text(newPlace.locations);
-		 $(".visitor").text(newPlace.visitor);
-     $(".visited").text(newPlace.visited);
-		 $(".landmark").text(newPlace.landmark);
-		 $(".notes").text(newPlace.notes);
-		//  $(".imagez").append("<img" + " " + 'src="' + newPlace.imagez + '">');
+		 $("#show-todo").show();
+		 $("#show-todo h2").text(newList.items);
+     $(".name").text(newList.names);
+		 $(".description").text(newList.descriptions);
+     $(".complete").text(newList.completed);
 		});
 
-    $("input#new-location").val("");
-    $("input#new-visitor").val("");
-	  $("input#new-visited").val("");
-	  $("input#new-landmark").val("");
-    $("input#new-notes").val("");
-    // $("input#new-imagez").val("");
+      $("input#new-names").val();
+      $("input#new-items").val();
+      $("input#new-descriptions").val();
+      $("input#new-completed").val();
+
   });
 });

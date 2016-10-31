@@ -2,14 +2,14 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-#showplace {
+#show-todo {
   display: none;
 }
-
+/*
 .place {
   cursor: pointer;
   color: #0088cc;
 }
 .contact:hover {
-  text-decoration: underline;
-}
+  text-decoration: ;
+}*/
